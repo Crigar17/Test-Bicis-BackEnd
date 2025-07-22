@@ -1,0 +1,18 @@
+{
+  "name": "alquiler-de-bicicletas",
+  "version": "1.0.0",
+  "description": "Alquiler de bicicletas por estaciones ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": [
+    "Express"
+  ],
+  "author": "Cristhian Alejandro Garcia Rojas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.16.4"
+  }
+}
