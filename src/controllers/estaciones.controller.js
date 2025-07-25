@@ -16,7 +16,7 @@ estacionPost = async (req, res) => {
 estacionGet = async (req, res) => {
     
     try {
-        const data = await estacionModel.find()
+        const data = await estacionModel.find().populate("bicicletas")
 
         res.json( data )
     } 

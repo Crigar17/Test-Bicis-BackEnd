@@ -14,6 +14,8 @@ app.use("/api/estacion", require("./routes/estacion.route.js"))
 
 app.use("/api/alquiler", require("./routes/alquiler.route.js"))
 
+app.use("/api/user", require("./routes/user.route.js"))
+
 
 app.listen(port,() => {
     console.log("Servidor corriendso en el puerto:", port);

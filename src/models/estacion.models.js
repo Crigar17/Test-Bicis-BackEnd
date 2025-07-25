@@ -3,7 +3,8 @@ const mongoose = require("mongoose")
 const estacionShema = new mongoose.Schema({
     nombre: {
         type: String,
-        require: true
+        require: true,
+        unique: true
     },
 
     ubicacion: {
@@ -16,8 +17,7 @@ const estacionShema = new mongoose.Schema({
     },
 
     bicicletasDisponibles: {
-        type: Number,
-        default: 0
+        type: [mongoose.Schema.Types.ObjectId],
     }
 })
 

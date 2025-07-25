@@ -16,7 +16,7 @@ alquilerPost = async (req, res) => {
 
 alquilerGet = async (req, res) => {
     try {
-        const data = await alquilerModels.find()
+        const data = await alquilerModels.find().populate(["Estaciones", "bicicleta"])
 
         res.json( data )
     } 
@@ -56,7 +56,7 @@ alquilerById = async (req, res) => {
     const alquilerId = req.params.alquilerId
 
     try {
-        const data = await alquilerModels.findById( alquilerId )
+        const data = await alquilerModels.findById( alquilerId ).populate(["bicicleta", "Estaciones"])
 
         res.json( data )
     } 

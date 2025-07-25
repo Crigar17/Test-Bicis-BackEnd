@@ -1,18 +1,20 @@
 const mongoose = require("mongoose")
 
 const alquilerShema = new mongoose.Schema({
-    // bicicletas: {type: mongoose.Schema.Types.ObjectId, ref: "Bicicleta", require: true},
-
-    // estacionSalida: {type: mongoose.Schema.type.ObjectId, ref: "estacion", require: true},
-
     bicicleta: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId, ref: "bicicletas",
+        require: true
+    },
+
+    usuario: {
+        type: mongoose.Schema.Types.ObjectId, ref: "usuario",
         require: true
     },
 
     estacionSalida: {
         type: String,
-        require: true
+        require: true,
+        type: mongoose.Schema.Types.ObjectId, ref: "Estaciones"
     },
 
     fechaInicio: {
@@ -28,7 +30,10 @@ const alquilerShema = new mongoose.Schema({
     activo: {
         type: Boolean,
         default: true
-    }
+    },
+
+
+    estaciones: {type: mongoose.Schema.Types.ObjectId, ref: "estaciones"}
 })
 
 
